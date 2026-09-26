@@ -1,0 +1,14 @@
+{
+  // VS Code offers these the first time the folder is opened. Two, not a pile:
+  // Live Server is how the page runs, Live Share is how you show it to your
+  // teacher when it does not.
+  //
+  // Tailwind CSS IntelliSense is deliberately NOT here. It wants a Tailwind
+  // config file to read, and this project loads Tailwind from a CDN with no
+  // config and no build step — so it would install and then do nothing. Unit 8
+  // is where a build step arrives; this is not that project.
+  "recommendations": [
+    "ritwickdey.LiveServer",
+    "ms-vsliveshare.vsliveshare"
+  ]
+}

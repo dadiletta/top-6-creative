@@ -1,0 +1,55 @@
+{
+  // WHAT THIS FILE IS FOR: a student who is stuck sends ONE link and their
+  // teacher sees the running page, not a description of it. Everything below
+  // is in service of that.
+
+  // Live Server on a port nobody has to look up. Live Share forwards whatever
+  // port a server is actually on, so this is not what makes sharing work — it
+  // is what makes the address the same on every machine in the room, which is
+  // what makes it sayable out loud.
+  "liveServer.settings.port": 5500,
+  "liveServer.settings.root": "/",
+
+  // The "Server is Started at port 5500" popup, once per launch, on a screen a
+  // beginner is already reading carefully. Nothing is lost by turning it off;
+  // the status bar still says whether the server is up.
+  "liveServer.settings.donotShowInfoMsg": true,
+
+  // Live Server otherwise refuses to start on a file it thinks has unclosed
+  // tags. This project is a working page a student edits in place, which means
+  // half-finished markup is the normal state here too — a server that will not
+  // run until the HTML is already right is a server that is never there when
+  // it is needed.
+  "liveServer.settings.donotVerifyTags": true,
+
+  // Share the running server with a guest automatically, so a Live Share
+  // session already has the page in it. Live Share's own default, set here so
+  // it stays true if the student's global settings say otherwise.
+  "liveshare.autoShareServers": true,
+
+  // Findable. The whole flow starts with a student locating this control, and
+  // "it is in the status bar" is a thing that can be said over a classroom.
+  "liveshare.showInStatusBar": "always",
+
+  // Nobody joins without the student saying yes, every time. This is a
+  // teenager's own machine and their own files.
+  "liveshare.guestApprovalRequired": true,
+
+  // Off the public listing. A session here is shared by sending its link to
+  // one person.
+  "liveshare.publishWorkspaceInfo": false,
+
+  // Emmet in HTML without asking for it. Unlike Hot Take, most of the work
+  // here is editing markup that already exists — but adding a seventh card by
+  // typing `article.card>div.card-body` and Tab is the common move.
+  "emmet.triggerExpansionOnTab": true,
+
+  // Two files, opened without hunting for them, and both stay open. This
+  // project is index.html and styles.css together — the whole of Unit 5 is
+  // moving between them.
+  "workbench.editor.enablePreview": false,
+
+  "files.exclude": {
+    "**/.DS_Store": true
+  }
+}

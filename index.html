@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en" data-theme="retro">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Top 6 — change this to your subject</title>
+    <meta name="description" content="One sentence about this list. Search results show it; write it." />
+
+    <!--
+      THE THREE TAGS. Tailwind and daisyUI, no build step, nothing installed.
+      Open this file with Live Server and start working.
+
+      Two honest notes:
+        1. The last tag is Tailwind's BROWSER build. Tailwind's own docs say it
+           is "designed for development purposes only, and is not intended for
+           production." That is fine for now. Unit 8 replaces it with a real
+           built stylesheet, because publishing to a public address is where
+           "development only" stops being acceptable.
+        2. These load from jsdelivr, which means jsdelivr sees a request from
+           every reader of your site. That is your call to make on your own
+           project. Read Unit 8's "what a page costs its reader" before you
+           decide it does not matter.
+    -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Your own rules go last, so they win. See styles.css. -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body class="bg-base-100 text-base-content">
+    <!--
+      THEME. data-theme is on <html>, at the top of this file. Change it to any
+      daisyUI theme name — synthwave, forest, cupcake, dracula, nord, autumn,
+      lofi, cyberpunk, night — and the whole page changes. Do that first, before
+      you write anything. It is the fastest way to find the mood you are after.
+
+      All 35 are at daisyui.com/docs/themes.
+    -->
+
+    <!-- Keyboard and screen-reader users get past the nav without tabbing
+         through it on every page load. One link, always first, visible only
+         when it has focus — see .skip in styles.css. -->
+    <a class="skip" href="#list">Skip to the list</a>
+
+    <!--
+      THE NAVBAR is see-through over the hero and solid once you scroll past
+      it. js/reveal.js adds .is-stuck; styles.css does the rest. Nothing breaks
+      if the script never runs — it just stays solid, which is the safe half.
+    -->
+    <nav class="site-nav" data-nav>
+      <div class="site-nav-inner">
+        <a class="site-nav-brand" href="#top">Your title</a>
+        <div class="site-nav-links">
+          <a href="#list">The list</a>
+          <a href="#method">Method</a>
+          <a class="btn btn-primary btn-sm" href="#one">Number one</a>
+        </div>
+      </div>
+    </nav>
+
+    <!--
+      THE HERO. One headline, one line of support, ONE call to action.
+      If you find yourself adding a second button, ask which one you would
+      delete if you had to. Then delete it.
+
+      The ground is a gradient built from YOUR THEME'S OWN COLORS, so it
+      restyles when you change the theme, weighs nothing, and can never 404.
+      Swap it for a photo when you have one you are allowed to use.
+    -->
+    <header class="hero-stage" id="top">
+      <div class="hero-mesh" aria-hidden="true"></div>
+
+      <div class="hero-body">
+        <p class="badge badge-lg hero-badge">Replace this badge or delete it</p>
+        <!-- No <br> in here on purpose. A hard break is a decision about a
+             screen width, and it is wrong at every other one; `text-wrap:
+             balance` in styles.css evens the lines out at whatever width the
+             reader actually has. -->
+        <h1 class="hero-title">
+          The six best <span class="hero-mark">[your subject]</span> in [your place]
+        </h1>
+        <p class="hero-support">
+          One sentence saying why you are the person to write this list. Real
+          credentials only — "I have eaten all of them twice" is a real one.
+        </p>
+        <a class="btn btn-primary btn-lg" href="#list">Start at number six</a>
+      </div>
+
+      <!-- Decorative: it repeats the button above, so it is hidden from screen
+           readers rather than read out twice. -->
+      <a class="hero-cue" href="#list" aria-hidden="true" tabindex="-1">
+        <span class="hero-cue-dot"></span>
+      </a>
+    </header>
+
+    <!--
+      THE LIST, counting DOWN. Six entries, one per rank, and they are parallel
+      on purpose: if one has a photo they all do, if one has two sentences they
+      all do. That is what makes a list read as a ranking instead of six
+      paragraphs.
+
+      Each <article> reveals as it scrolls into view — see js/reveal.js. The
+      data-reveal attribute is the whole opt-in.
+    -->
+    <main id="list" class="list-wrap">
+      <header class="list-head" data-reveal>
+        <p class="eyebrow">The countdown</p>
+        <h2 class="section-title">Six of them, worst to best</h2>
+        <p class="section-support">
+          One sentence on what these six have in common — the thing that made
+          them eligible at all.
+        </p>
+      </header>
+
+      <ol class="list-grid">
+        <!--
+          ONE ENTRY. Copy this whole <li> to change the shape of all six, then
+          paste it six times — it is much easier to keep them parallel that way
+          than to edit six that have already drifted apart.
+        -->
+        <li class="entry" data-reveal>
+          <article class="entry-card">
+            <!--
+              THE PHOTO SLOT. Replace the <div> with a real image when you have
+              one you are allowed to use:
+
+                <img src="images/six.jpg" alt="What the photo shows" />
+
+              alt text says what the image is FOR, not "photo". And the
+              creator, source and license go in the footer — if you cannot
+              write that line, you are not allowed to use the picture.
+            -->
+            <figure class="shot">
+              <div class="shot-empty">Your photo</div>
+              <figcaption class="shot-cap">A caption you would say out loud</figcaption>
+            </figure>
+
+            <div class="entry-body">
+              <span class="rank" aria-hidden="true">06</span>
+              <h3 class="entry-title"><span class="sr-only">Number six: </span>Your sixth pick</h3>
+              <p class="entry-note">Two sentences. What it is, and why it earned this spot.</p>
+            </div>
+          </article>
+        </li>
+
+        <li class="entry" data-reveal>
+          <article class="entry-card">
+            <figure class="shot">
+              <div class="shot-empty">Your photo</div>
+              <figcaption class="shot-cap">A caption you would say out loud</figcaption>
+            </figure>
+            <div class="entry-body">
+              <span class="rank" aria-hidden="true">05</span>
+              <h3 class="entry-title"><span class="sr-only">Number five: </span>Your fifth pick</h3>
+              <p class="entry-note">Two sentences. What it is, and why it earned this spot.</p>
+            </div>
+          </article>
+        </li>
+
+        <li class="entry" data-reveal>
+          <article class="entry-card">
+            <figure class="shot">
+              <div class="shot-empty">Your photo</div>
+              <figcaption class="shot-cap">A caption you would say out loud</figcaption>
+            </figure>
+            <div class="entry-body">
+              <span class="rank" aria-hidden="true">04</span>
+              <h3 class="entry-title"><span class="sr-only">Number four: </span>Your fourth pick</h3>
+              <p class="entry-note">Two sentences. What it is, and why it earned this spot.</p>
+            </div>
+          </article>
+        </li>
+
+        <li class="entry" data-reveal>
+          <article class="entry-card">
+            <figure class="shot">
+              <div class="shot-empty">Your photo</div>
+              <figcaption class="shot-cap">A caption you would say out loud</figcaption>
+            </figure>
+            <div class="entry-body">
+              <span class="rank" aria-hidden="true">03</span>
+              <h3 class="entry-title"><span class="sr-only">Number three: </span>Your third pick</h3>
+              <p class="entry-note">Two sentences. What it is, and why it earned this spot.</p>
+            </div>
+          </article>
+        </li>
+
+        <li class="entry" data-reveal>
+          <article class="entry-card">
+            <figure class="shot">
+              <div class="shot-empty">Your photo</div>
+              <figcaption class="shot-cap">A caption you would say out loud</figcaption>
+            </figure>
+            <div class="entry-body">
+              <span class="rank" aria-hidden="true">02</span>
+              <h3 class="entry-title"><span class="sr-only">Number two: </span>Your second pick</h3>
+              <p class="entry-note">Two sentences. What it is, and why it earned this spot.</p>
+            </div>
+          </article>
+        </li>
+
+        <!--
+          NUMBER ONE IS DIFFERENT, and that is the point of a ranking. It spans
+          the whole grid, its photo sits beside its words instead of above
+          them, and it is the only one wearing the primary color. One
+          exception, made loudly — six cards where one is slightly bigger reads
+          as a mistake.
+        -->
+        <li class="entry entry-one" id="one" data-reveal>
+          <article class="entry-card">
+            <figure class="shot">
+              <div class="shot-empty">Your photo</div>
+              <figcaption class="shot-cap">A caption you would say out loud</figcaption>
+            </figure>
+            <div class="entry-body">
+              <span class="rank" aria-hidden="true">01</span>
+              <p class="eyebrow">The best one</p>
+              <h3 class="entry-title"><span class="sr-only">Number one: </span>Your number one</h3>
+              <p class="entry-note">
+                Two sentences, and make them the best two. This is the one
+                somebody screenshots.
+              </p>
+            </div>
+          </article>
+        </li>
+      </ol>
+    </main>
+
+    <!--
+      METHOD. Optional, and better than it sounds: saying how you ranked them
+      is what turns a list of opinions into an argument.
+    -->
+    <section id="method" class="method">
+      <div class="method-inner" data-reveal>
+        <p class="eyebrow">Method</p>
+        <h2 class="section-title">How I ranked these</h2>
+        <div class="method-cols">
+          <div>
+            <h3 class="method-h">What I judged on</h3>
+            <p class="section-support">
+              Two or three things, named. "Good" is not one of them.
+            </p>
+          </div>
+          <div>
+            <h3 class="method-h">What I ignored</h3>
+            <p class="section-support">
+              The thing everyone else ranks by that you decided did not matter,
+              and why.
+            </p>
+          </div>
+          <div>
+            <h3 class="method-h">Where I could be wrong</h3>
+            <p class="section-support">
+              The strongest argument against your number one. Saying it makes
+              the rest more believable, not less.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-foot">
+      <div class="site-foot-inner">
+        <div>
+          <p class="site-foot-title">Your title</p>
+          <p class="section-support">Your name. Revised whenever I am wrong.</p>
+        </div>
+        <div>
+          <p class="site-foot-title">Credits</p>
+          <!--
+            EVERY BORROWED THING GOES HERE: creator, source, license. Every
+            photo on this page needs that line. If you cannot write it, you do
+            not know whether you are allowed to use the image.
+          -->
+          <p class="section-support">
+            Every image, its creator, source and license. This page has none
+            yet.
+          </p>
+          <p class="section-support">© 20XX Your name.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/reveal.js"></script>
+  </body>
+</html>
