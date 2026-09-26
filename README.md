@@ -2,8 +2,13 @@
 
 Six of something you are genuinely expert in, on a page you assemble.
 
-**See it running: <https://ladiletta.github.io/top-6-creative/>** — that page is
+**See it running: <https://dadiletta.github.io/top-6-creative/>** — that page is
 built from this branch, so it is exactly what you get when you copy it.
+
+**Treat it like a portfolio template you found online.** It ships with six
+photos in its portfolio grid, so your page is a Top 6. Working inside a
+template's shape, instead of fighting it, is how you build fast. The six NASA
+photos are placeholders, like the words: replace them with photos of your six.
 
 The form is fixed so everyone's craft is comparable. **The subject is yours**,
 so the expertise is real. Six best breakfasts in Cleveland. Six worst bus stops.
@@ -16,7 +21,9 @@ you do to it, which means you learn nothing from it.
 ```
 index.html      nav · hero · the six · method · footer
 styles.css      your palette, your type, the hover and reveal rules
-js/reveal.js    the navbar on scroll, and the entries arriving
+js/reveal.js    the navbar, the entries arriving, number one's countdown
+img/            the six photos and the tab icon
+AGENTS.md       what AI help may do on this project (read it)
 ```
 
 ## Start here
@@ -34,7 +41,8 @@ js/reveal.js    the navbar on scroll, and the entries arriving
    you want. Try `synthwave`, `forest`, `cupcake`, `dracula`, `nord`, `autumn`,
    `lofi`, `night`. All 35 are at
    [daisyui.com/docs/themes](https://daisyui.com/docs/themes/).
-4. Replace the headline and the six entries with your own.
+4. Replace the headline, the six entries and the six photos with your own.
+   Every photo you keep or add gets a line in the footer's credits.
 5. Commit as you go. Push at least once a session — a commit is local until you
    push it, and **pushed is submitted**.
 
@@ -46,11 +54,17 @@ Read `js/reveal.js`; it is short and it explains itself. The short version:
   it.
 - **Each entry arrives** as it scrolls into view, fanned out by a few
   milliseconds so they do not all land at once.
+- **Number one counts down** from 06 to 01 as it arrives, then a band of light
+  sweeps across it once. Delete `data-count-from` in `index.html` to turn the
+  count off.
+- **The footer year** keeps itself current: `data-year` on the `<span>`.
 - **Nothing is hidden by CSS alone.** The script puts a class on `<html>`
   first, and only that class turns on the rules that hide things. So if the
   script is blocked or broken you get the whole page with no flourish — never a
   blank one. **That is the part worth copying into your own work.**
-- **Neither effect runs** for a reader whose system asks for reduced motion.
+- **None of the movement runs** for a reader whose system asks for reduced
+  motion. Add anything new you animate to that block at the foot of
+  `styles.css`.
 
 ## Things that will bite you
 
@@ -65,9 +79,9 @@ Read `js/reveal.js`; it is short and it explains itself. The short version:
   cards where one is *slightly* bigger reads as a mistake instead.
 - **The sticky navbar covering your anchors.** Handled by `scroll-margin-top`
   in `styles.css`. Change the navbar's height, change that number.
-- **`aspect-ratio` on the photo slot** is what keeps the grid tidy before you
-  have any photos. Real images go in at any size and get cropped to fit; that
-  is `object-fit: cover` doing its job.
+- **`aspect-ratio` on the photo slot** keeps the grid tidy whatever shape your
+  photos are. They get cropped to fit; that is `object-fit: cover` doing its
+  job, so keep the subject near the middle of each one.
 
 ## Check your own work before you hand it in
 
@@ -104,7 +118,8 @@ is much better to find these than to have them found.
       cannot write that line, you are not allowed to use it.**
 - [ ] The page still works with JavaScript off. Nothing should disappear.
 - [ ] If you used AI to generate any part of this, say so and say which part.
-      That is the professional norm and it costs you nothing.
+      That is the professional norm and it costs you nothing. `AGENTS.md`
+      says what AI may help with, and when.
 - [ ] It works from a fresh clone — no absolute paths to your own disk.
 - [ ] It is **pushed**.
 
@@ -113,5 +128,8 @@ is much better to find these than to have them found.
 Component classes are [daisyUI](https://daisyui.com/) by Pouya Saadeghi (MIT),
 on [Tailwind CSS](https://tailwindcss.com/) (MIT). Both load from a CDN via the
 three tags in `<head>`.
+
+The six photos are NASA's and in the public domain; each is credited in the
+page's footer.
 
 Everything else here was written for this course, MIT licensed. See `LICENSE`.

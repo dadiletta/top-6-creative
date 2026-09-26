@@ -6,49 +6,25 @@
     <title>Top 6 — change this to your subject</title>
     <meta name="description" content="One sentence about this list. Search results show it; write it." />
 
-    <!--
-      THE THREE TAGS. Tailwind and daisyUI, no build step, nothing installed.
-      Open this file with Live Server and start working.
-
-      Two honest notes:
-        1. The last tag is Tailwind's BROWSER build. Tailwind's own docs say it
-           is "designed for development purposes only, and is not intended for
-           production." That is fine for now. Unit 8 replaces it with a real
-           built stylesheet, because publishing to a public address is where
-           "development only" stops being acceptable.
-        2. These load from jsdelivr, which means jsdelivr sees a request from
-           every reader of your site. That is your call to make on your own
-           project. Read Unit 8's "what a page costs its reader" before you
-           decide it does not matter.
-    -->
+    <!-- Tailwind and daisyUI, no build step. Open this file with Live Server.
+         Tailwind's browser build is for development only; Unit 8 replaces it. -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-    <!-- Your own rules go last, so they win. See styles.css. -->
+    <!-- The tab icon. Redraw img/favicon.svg in your own colors. -->
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
+    <!-- Your own rules go last, so they win. -->
     <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body class="bg-base-100 text-base-content">
-    <!--
-      THEME. data-theme is on <html>, at the top of this file. Change it to any
-      daisyUI theme name — synthwave, forest, cupcake, dracula, nord, autumn,
-      lofi, cyberpunk, night — and the whole page changes. Do that first, before
-      you write anything. It is the fastest way to find the mood you are after.
+    <!-- THEME: change data-theme on <html> first. Try synthwave, forest,
+         cupcake, dracula, nord, autumn, lofi, night. All 35 are at
+         daisyui.com/docs/themes. -->
 
-      All 35 are at daisyui.com/docs/themes.
-    -->
-
-    <!-- Keyboard and screen-reader users get past the nav without tabbing
-         through it on every page load. One link, always first, visible only
-         when it has focus — see .skip in styles.css. -->
     <a class="skip" href="#list">Skip to the list</a>
 
-    <!--
-      THE NAVBAR is see-through over the hero and solid once you scroll past
-      it. js/reveal.js adds .is-stuck; styles.css does the rest. Nothing breaks
-      if the script never runs — it just stays solid, which is the safe half.
-    -->
     <nav class="site-nav" data-nav>
       <div class="site-nav-inner">
         <a class="site-nav-brand" href="#top">Your title</a>
@@ -60,24 +36,12 @@
       </div>
     </nav>
 
-    <!--
-      THE HERO. One headline, one line of support, ONE call to action.
-      If you find yourself adding a second button, ask which one you would
-      delete if you had to. Then delete it.
-
-      The ground is a gradient built from YOUR THEME'S OWN COLORS, so it
-      restyles when you change the theme, weighs nothing, and can never 404.
-      Swap it for a photo when you have one you are allowed to use.
-    -->
+    <!-- THE HERO: one headline, one line of support, one button. -->
     <header class="hero-stage" id="top">
       <div class="hero-mesh" aria-hidden="true"></div>
 
       <div class="hero-body">
         <p class="badge badge-lg hero-badge">Replace this badge or delete it</p>
-        <!-- No <br> in here on purpose. A hard break is a decision about a
-             screen width, and it is wrong at every other one; `text-wrap:
-             balance` in styles.css evens the lines out at whatever width the
-             reader actually has. -->
         <h1 class="hero-title">
           The six best <span class="hero-mark">[your subject]</span> in [your place]
         </h1>
@@ -88,22 +52,11 @@
         <a class="btn btn-primary btn-lg" href="#list">Start at number six</a>
       </div>
 
-      <!-- Decorative: it repeats the button above, so it is hidden from screen
-           readers rather than read out twice. -->
       <a class="hero-cue" href="#list" aria-hidden="true" tabindex="-1">
         <span class="hero-cue-dot"></span>
       </a>
     </header>
 
-    <!--
-      THE LIST, counting DOWN. Six entries, one per rank, and they are parallel
-      on purpose: if one has a photo they all do, if one has two sentences they
-      all do. That is what makes a list read as a ranking instead of six
-      paragraphs.
-
-      Each <article> reveals as it scrolls into view — see js/reveal.js. The
-      data-reveal attribute is the whole opt-in.
-    -->
     <main id="list" class="list-wrap">
       <header class="list-head" data-reveal>
         <p class="eyebrow">The countdown</p>
@@ -115,25 +68,14 @@
       </header>
 
       <ol class="list-grid">
-        <!--
-          ONE ENTRY. Copy this whole <li> to change the shape of all six, then
-          paste it six times — it is much easier to keep them parallel that way
-          than to edit six that have already drifted apart.
-        -->
+        <!-- ONE ENTRY. Keep all six parallel: if one has two sentences, they all
+             do. Change the shape of one, then copy it over the other five. -->
         <li class="entry" data-reveal>
           <article class="entry-card">
-            <!--
-              THE PHOTO SLOT. Replace the <div> with a real image when you have
-              one you are allowed to use:
-
-                <img src="images/six.jpg" alt="What the photo shows" />
-
-              alt text says what the image is FOR, not "photo". And the
-              creator, source and license go in the footer — if you cannot
-              write that line, you are not allowed to use the picture.
-            -->
+            <!-- YOUR PHOTO: put it in img/, change src and alt, and credit it
+                 in the footer. alt says what the picture shows. -->
             <figure class="shot">
-              <div class="shot-empty">Your photo</div>
+              <img src="img/liftoff.jpg" width="900" height="675" loading="lazy" alt="A Saturn V rocket clearing the launch tower in fire and smoke, seen from above" />
               <figcaption class="shot-cap">A caption you would say out loud</figcaption>
             </figure>
 
@@ -148,7 +90,7 @@
         <li class="entry" data-reveal>
           <article class="entry-card">
             <figure class="shot">
-              <div class="shot-empty">Your photo</div>
+              <img src="img/spacewalk.jpg" width="900" height="675" loading="lazy" alt="An astronaut on a gold tether floating outside his spacecraft, the Earth's edge behind him" />
               <figcaption class="shot-cap">A caption you would say out loud</figcaption>
             </figure>
             <div class="entry-body">
@@ -162,7 +104,7 @@
         <li class="entry" data-reveal>
           <article class="entry-card">
             <figure class="shot">
-              <div class="shot-empty">Your photo</div>
+              <img src="img/untethered.jpg" width="900" height="675" loading="lazy" alt="An astronaut in a jet-powered backpack flying free above a blue, cloud-covered Earth" />
               <figcaption class="shot-cap">A caption you would say out loud</figcaption>
             </figure>
             <div class="entry-body">
@@ -176,7 +118,7 @@
         <li class="entry" data-reveal>
           <article class="entry-card">
             <figure class="shot">
-              <div class="shot-empty">Your photo</div>
+              <img src="img/moonwalk.jpg" width="900" height="675" loading="lazy" alt="An astronaut standing on the gray lunar surface, the photographer reflected in his visor" />
               <figcaption class="shot-cap">A caption you would say out loud</figcaption>
             </figure>
             <div class="entry-body">
@@ -190,7 +132,7 @@
         <li class="entry" data-reveal>
           <article class="entry-card">
             <figure class="shot">
-              <div class="shot-empty">Your photo</div>
+              <img src="img/blue-marble.jpg" width="900" height="675" loading="lazy" alt="The whole Earth, fully lit, with Africa and Antarctica under swirling white cloud" />
               <figcaption class="shot-cap">A caption you would say out loud</figcaption>
             </figure>
             <div class="entry-body">
@@ -201,21 +143,17 @@
           </article>
         </li>
 
-        <!--
-          NUMBER ONE IS DIFFERENT, and that is the point of a ranking. It spans
-          the whole grid, its photo sits beside its words instead of above
-          them, and it is the only one wearing the primary color. One
-          exception, made loudly — six cards where one is slightly bigger reads
-          as a mistake.
-        -->
+        <!-- NUMBER ONE is the one exception: full width, photo beside the words,
+             the primary color. data-count-from makes its numeral count down to
+             01 as it arrives; delete the attribute to turn that off. -->
         <li class="entry entry-one" id="one" data-reveal>
           <article class="entry-card">
             <figure class="shot">
-              <div class="shot-empty">Your photo</div>
+              <img src="img/earthrise.jpg" width="900" height="675" loading="lazy" alt="The Earth, half lit, rising over the gray horizon of the Moon" />
               <figcaption class="shot-cap">A caption you would say out loud</figcaption>
             </figure>
             <div class="entry-body">
-              <span class="rank" aria-hidden="true">01</span>
+              <span class="rank" aria-hidden="true" data-count-from="6">01</span>
               <p class="eyebrow">The best one</p>
               <h3 class="entry-title"><span class="sr-only">Number one: </span>Your number one</h3>
               <p class="entry-note">
@@ -228,10 +166,7 @@
       </ol>
     </main>
 
-    <!--
-      METHOD. Optional, and better than it sounds: saying how you ranked them
-      is what turns a list of opinions into an argument.
-    -->
+    <!-- METHOD: how you ranked them turns a list of opinions into an argument. -->
     <section id="method" class="method">
       <div class="method-inner" data-reveal>
         <p class="eyebrow">Method</p>
@@ -266,19 +201,20 @@
         <div>
           <p class="site-foot-title">Your title</p>
           <p class="section-support">Your name. Revised whenever I am wrong.</p>
+          <p class="section-support">© <span data-year>20XX</span> Your name.</p>
         </div>
         <div>
           <p class="site-foot-title">Credits</p>
-          <!--
-            EVERY BORROWED THING GOES HERE: creator, source, license. Every
-            photo on this page needs that line. If you cannot write it, you do
-            not know whether you are allowed to use the image.
-          -->
-          <p class="section-support">
-            Every image, its creator, source and license. This page has none
-            yet.
-          </p>
-          <p class="section-support">© 20XX Your name.</p>
+          <!-- CREDITS: creator, source and license for every image. Replace
+               these six lines as you replace the photos. -->
+          <ul class="credits">
+            <li>Launch: <a href="https://images.nasa.gov/details/S69-39961">NASA, S69-39961</a>, public domain.</li>
+            <li>Spacewalk: <a href="https://images.nasa.gov/details/s65-30433">NASA, S65-30433</a>, public domain.</li>
+            <li>Free flight: <a href="https://images.nasa.gov/details/s84-27017">NASA, S84-27017</a>, public domain.</li>
+            <li>Moonwalk: <a href="https://images.nasa.gov/details/as11-40-5903">NASA, AS11-40-5903</a>, public domain.</li>
+            <li>Whole Earth: <a href="https://images.nasa.gov/details/as17-148-22727">NASA, AS17-148-22727</a>, public domain.</li>
+            <li>Earthrise: <a href="https://images.nasa.gov/details/as08-14-2383">NASA, AS08-14-2383</a>, public domain.</li>
+          </ul>
         </div>
       </div>
     </footer>

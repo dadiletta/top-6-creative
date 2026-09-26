@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <!-- The tab icon, a 6. Colors are written out: a favicon cannot read your theme. -->
+  <rect width="24" height="24" rx="5" fill="#1f2937"/>
+  <g fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round">
+    <path d="M15.6 5.4C11.6 5.2 8.1 8.3 8 14.8"/>
+    <circle cx="12" cy="15" r="4"/>
+  </g>
+</svg>
