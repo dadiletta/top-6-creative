@@ -34,8 +34,9 @@ AGENTS.md       what AI help may do on this project (read it)
    Share** in the status bar, paste the link it copies into Google Chat, and go
    back to work.
 2. Open `index.html` with **Live Server** — the **Go Live** button in the
-   status bar. Not by double-clicking: see Unit 4 for why `file://` is not a
-   website.
+   status bar. Not by double-clicking: that opens a path on your disk
+   (`file://`), not a web address, with no server behind it, and a page loaded
+   that way is not allowed to do several things a real page does.
 3. Change `data-theme="retro"` on the `<html>` tag to something else. Do this
    **first**. It takes five seconds and it is the fastest way to find the mood
    you want. Try `synthwave`, `forest`, `cupcake`, `dracula`, `nord`, `autumn`,
