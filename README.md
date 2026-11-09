@@ -103,13 +103,21 @@ is much better to find these than to have them found.
 
 ### Craft
 
-- [ ] Your palette is recorded as a comment block at the top of `styles.css`,
-      with a mood sentence and a job for each color.
+- [ ] Your palette is recorded as a comment block at the top of `custom.css`,
+      your own file, linked after `styles.css`, with a mood sentence and a job
+      for each color.
 - [ ] Two type faces at most: one for headings, one for body.
 - [ ] Body text against its background is at least **4.5:1**. Check it — do not
       guess. If you changed `--color-primary`, check white on it too.
 - [ ] One column on a phone, more on wider screens. Check at 380px, 768px and
       full width. Nothing scrolls sideways at 380px.
+- [ ] Your three runners-up (or the opposite three) are in a daisyUI carousel
+      that works on a phone and wears the page's own photos, words and colors.
+
+### Voice
+
+- [ ] The six entries are parallel and sound like one writer who knows the
+      subject. The headline and intro set up the list.
 
 ### Honesty
 
